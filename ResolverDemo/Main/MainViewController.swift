@@ -11,11 +11,14 @@ import Resolver
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var cloudBtn: UIButton!
+    @IBOutlet weak var localBtn: UIButton!
+    
     let viewModel = Resolver.resolve(MainViewModel.self)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
 
