@@ -12,6 +12,17 @@ import Resolver
 extension Resolver: ResolverRegistering {
     public static func registerAllServices() {
         registerDataLayer()
-        registerMain()
+        registerVMs()
+    }
+    
+    public static func registerDataLayer(){
+        register { DataFactory(remoteRepo: resolve(), localRepo: resolve()) }
+        register { RemoteRepository() }
+        register { LocalRepository() }
+    }
+    
+    public static func registerVMs(){
+        register { MainViewModel(dataFactory: resolve()) }
+        register { SecondViewModel(dataFactory: resolve()) }
     }
 }

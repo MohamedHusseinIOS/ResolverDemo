@@ -34,6 +34,9 @@
                                 <real key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="cloudBtnTapped:" destination="ZGu-tz-2Vj" eventType="touchUpInside" id="Jag-oS-deO"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZX-Ho-sGc">
                         <rect key="frame" x="107" y="354" width="200" height="30"/>
@@ -43,6 +46,21 @@
                         <state key="normal" title="Local Test">
                             <color key="titleColor" red="0.0039215686269999999" green="0.66274509800000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="clipToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.0039215686269999999" green="0.66274509800000003" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="localBtnTapped:" destination="ZGu-tz-2Vj" eventType="touchUpInside" id="mxh-4h-SX4"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -55,10 +73,6 @@
                 </constraints>
                 <viewLayoutGuide key="safeArea" id="lCp-mX-DrG"/>
             </view>
-            <connections>
-                <outlet property="cloudBtn" destination="tGp-x4-Stf" id="QbR-0Z-0Xa"/>
-                <outlet property="localBtn" destination="uZX-Ho-sGc" id="xhg-i3-oJY"/>
-            </connections>
             <point key="canvasLocation" x="12" y="185"/>
         </viewController>
     </objects>

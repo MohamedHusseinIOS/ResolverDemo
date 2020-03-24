@@ -7,3 +7,8 @@
 //
 
 import Foundation
+import RealmSwift
+
+class Model: Object ,BaseModel  {
+    @objc dynamic var message: String?
+}

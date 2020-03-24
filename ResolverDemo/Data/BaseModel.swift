@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import RealmSwift
 
-protocol BaseModel: Codable, Decoderable {}
 
-struct ErrorModel: Error, BaseModel{
+protocol BaseModel: Object ,Codable, Decoderable {}
+
+class ErrorModel: Object, BaseModel, Error {
     var message: String?
     var code: Int?
 }

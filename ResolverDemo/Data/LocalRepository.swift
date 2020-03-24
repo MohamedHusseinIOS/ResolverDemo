@@ -9,23 +9,4 @@
 import Foundation
 import RxSwift
 
-protocol LocalRepositoryProtocol {
-    func save <T: BaseModel>(_ items: [T])
-    func load() -> Observable<Any>
-}
-
-extension LocalRepositoryProtocol {
-    
-    func save<T: BaseModel> (_ items: [T]) {
-       
-    }
-    
-    func load() -> Observable<Any> {
-        return Observable<Any>.create { (observable) -> Disposable in
-            return Disposables.create()
-        }
-    }
-}
-
-
-class LocalRepository: LocalRepositoryProtocol {}
+class LocalRepository: RepositoryProtocol {}

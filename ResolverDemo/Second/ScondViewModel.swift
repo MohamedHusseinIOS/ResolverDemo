@@ -7,3 +7,25 @@
 //
 
 import Foundation
+
+class SecondViewModel: ViewModelType {
+    
+    struct Input {
+        
+    }
+    
+    struct Output {
+        
+    }
+    
+    let input: Input
+    let output: Output
+    
+    let dataFactory: DataFactory
+    
+    init(dataFactory: DataFactory) {
+        self.dataFactory = dataFactory
+        self.input = Input()
+        self.output = Output()
+    }
+}

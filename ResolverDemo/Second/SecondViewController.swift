@@ -7,24 +7,26 @@
 //
 
 import UIKit
+import Resolver
 
 class SecondViewController: UIViewController {
 
+    @IBOutlet weak var messageLbl: UILabel!
+    
+    var message = ""
+    
+    let viewModel = Resolver.resolve(SecondViewModel.self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let localRepo = viewModel.dataFactory.localRepository
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        messageLbl.text = message
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

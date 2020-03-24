@@ -10,35 +10,26 @@ import Foundation
 import RxSwift
 import Resolver
 
-protocol DataFactoryProtocol {
-    
-    var remoteRepository: RemoteRepositoryProtocol { get }
-    var localRepository: LocalRepositoryProtocol { get }
-    
-    func get <T: BaseModel>(url: String, model: T.Type) -> Observable<Any>
-    func save <T: BaseModel>(_ items: [T])
-}
 
-extension DataFactoryProtocol{
+class DataFactory {
+    
+    let remoteRepository: RemoteRepository
+    let localRepository: LocalRepository
+    
+    init(remoteRepo: RemoteRepository, localRepo: LocalRepository) {
+        self.remoteRepository = remoteRepo
+        self.localRepository = localRepo
+        
+        print("DataFactory")
+    }
     
     func get <T: BaseModel>(url: String, model: T.Type) -> Observable<Any> {
         let remoteResponse = remoteRepository.get(url: url, parameters: nil, model: model.self)
-        let localResponse = localRepository.load()
+        let localResponse = localRepository.load(model: model.self)
         return Observable<Any>.concat([remoteResponse, localResponse])
     }
     
     func save <T: BaseModel>(_ items: [T]) {
-        
-    }
-}
-
-class DataFactory: DataFactoryProtocol {
-    
-    var remoteRepository: RemoteRepositoryProtocol
-    var localRepository: LocalRepositoryProtocol
-    
-    init(remoteRepo: RemoteRepositoryProtocol, localRepo: LocalRepositoryProtocol) {
-        self.remoteRepository = remoteRepo
-        self.localRepository = localRepo
+        localRepository.save(items)
     }
 }
