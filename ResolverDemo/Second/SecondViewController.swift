@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Resolver
+import Swinject
 
 class SecondViewController: UIViewController {
 
@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     
     var message = ""
     
-    let viewModel = Resolver.resolve(SecondViewModel.self)
+    let viewModel = Container().resolve(SecondViewModel.self)!
     
     override func viewDidLoad() {
         super.viewDidLoad()

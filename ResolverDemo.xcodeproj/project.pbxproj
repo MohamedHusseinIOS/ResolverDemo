@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		840834EC2429EE1A006D085B /* AppDelegate+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840834EB2429EE1A006D085B /* AppDelegate+Injection.swift */; };
 		840834F2242A0AB6006D085B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 840834F1242A0AB6006D085B /* MainViewController.xib */; };
 		840834F8242A0E1A006D085B /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840834F7242A0E1A006D085B /* SecondViewController.swift */; };
 		840834FA242A0E2C006D085B /* ScondViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840834F9242A0E2C006D085B /* ScondViewModel.swift */; };
@@ -30,11 +29,11 @@
 		8493402D24291FBE00DFEDD2 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402924291FBE00DFEDD2 /* UIView+Extension.swift */; };
 		8493402E24291FBE00DFEDD2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402A24291FBE00DFEDD2 /* UIViewController+Extension.swift */; };
 		8493402F24291FBE00DFEDD2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402B24291FBE00DFEDD2 /* Data+Extension.swift */; };
+		8495337C242B414F00FD2593 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495337B242B414F00FD2593 /* Injection.swift */; };
 		902476A2BB7D86592BBFE392 /* Pods_ResolverDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88BC970D56A7F64DE78DD20 /* Pods_ResolverDemo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		840834EB2429EE1A006D085B /* AppDelegate+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Injection.swift"; sourceTree = "<group>"; };
 		840834F1242A0AB6006D085B /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		840834F7242A0E1A006D085B /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		840834F9242A0E2C006D085B /* ScondViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScondViewModel.swift; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		8493402924291FBE00DFEDD2 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8493402A24291FBE00DFEDD2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8493402B24291FBE00DFEDD2 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		8495337B242B414F00FD2593 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
 		AE8241F7B1284344B80CB753 /* Pods-ResolverDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResolverDemo.release.xcconfig"; path = "Target Support Files/Pods-ResolverDemo/Pods-ResolverDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C9335373086316A1ED1D3CFA /* Pods-ResolverDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResolverDemo.debug.xcconfig"; path = "Target Support Files/Pods-ResolverDemo/Pods-ResolverDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D88BC970D56A7F64DE78DD20 /* Pods_ResolverDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResolverDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,8 +126,8 @@
 			children = (
 				8493402724291FBE00DFEDD2 /* Extensions */,
 				849340002428E9F300DFEDD2 /* AppDelegate.swift */,
-				840834EB2429EE1A006D085B /* AppDelegate+Injection.swift */,
 				849340022428E9F300DFEDD2 /* SceneDelegate.swift */,
+				8495337B242B414F00FD2593 /* Injection.swift */,
 				849340062428E9F300DFEDD2 /* Main.storyboard */,
 				849340092428E9F600DFEDD2 /* Assets.xcassets */,
 				840834FD242A111E006D085B /* ViewModelType.swift */,
@@ -299,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8495337C242B414F00FD2593 /* Injection.swift in Sources */,
 				849340222429152D00DFEDD2 /* NetworkManager.swift in Sources */,
 				8493402F24291FBE00DFEDD2 /* Data+Extension.swift in Sources */,
 				849340152428ECAB00DFEDD2 /* MainViewModel.swift in Sources */,
@@ -312,7 +313,6 @@
 				849340012428E9F300DFEDD2 /* AppDelegate.swift in Sources */,
 				8493402D24291FBE00DFEDD2 /* UIView+Extension.swift in Sources */,
 				840834FE242A111E006D085B /* ViewModelType.swift in Sources */,
-				840834EC2429EE1A006D085B /* AppDelegate+Injection.swift in Sources */,
 				8493401A242911DD00DFEDD2 /* DataFactory.swift in Sources */,
 				8493402C24291FBE00DFEDD2 /* DataResponse+Extension.swift in Sources */,
 				849340242429179A00DFEDD2 /* Decoderable.swift in Sources */,

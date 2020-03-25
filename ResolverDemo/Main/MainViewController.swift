@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Resolver
+import Swinject
 import RxSwift
 
 class MainViewController: UIViewController {
 
 
-    let viewModel = Resolver.resolve(MainViewModel.self)
+    let viewModel = Container().resolve(MainViewModel.self)!
     
     override func viewDidLoad() {
         super.viewDidLoad()
