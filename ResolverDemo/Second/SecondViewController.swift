@@ -15,7 +15,7 @@ class SecondViewController: UIViewController {
     
     var message = ""
     
-    let viewModel = Container().resolve(SecondViewModel.self)!
+    let viewModel = Injection.container.resolve(SecondViewModel.self)!
     
     override func viewDidLoad() {
         super.viewDidLoad()

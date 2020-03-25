@@ -13,7 +13,7 @@ import RxSwift
 class MainViewController: UIViewController {
 
 
-    let viewModel = Container().resolve(MainViewModel.self)!
+    let viewModel = Injection.container.resolve(MainViewModel.self)!
     
     override func viewDidLoad() {
         super.viewDidLoad()

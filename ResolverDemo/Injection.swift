@@ -11,13 +11,12 @@ import Swinject
 
 class Injection {
     
-    private let container: Container
     
-    init(container: Container) {
-        self.container = container
-    }
+    static let container = Container()
     
-    private func registerDataFactory(){
+    private init() {}
+    
+    private static func registerDataFactory(){
         container.register(RemoteRepository.self) { _ in
             RemoteRepository()
         }.inObjectScope(.container)
@@ -29,23 +28,23 @@ class Injection {
         container.register(DataFactory.self) { r in
             let remote = r.resolve(RemoteRepository.self)!
             let local = r.resolve(LocalRepository.self)!
-            DataFactory(remoteRepo: remote, localRepo: local)
+            return DataFactory(remoteRepo: remote, localRepo: local)
         }.inObjectScope(.container)
     }
     
-    private func registerVMs(){
+    private static func registerVMs(){
         container.register(MainViewModel.self) { r in
             let dataFactory = r.resolve(DataFactory.self)!
-            MainViewModel(dataFactory: dataFactory)
+            return MainViewModel(dataFactory: dataFactory)
         }
         
         container.register(SecondViewModel.self) { r in
             let dataFactory = r.resolve(DataFactory.self)!
-            SecondViewModel(dataFactory: dataFactory)
+            return SecondViewModel(dataFactory: dataFactory)
         }
     }
     
-    func register(){
+    public static func register(){
         registerDataFactory()
         registerVMs()
     }
