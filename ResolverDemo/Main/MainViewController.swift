@@ -21,14 +21,14 @@ class MainViewController: UIViewController {
     }
 
     @IBAction func cloudBtnTapped(_ sender: UIButton) {
-        let message = viewModel.dataFactory.remoteRepository.getOnlineMessage()
+        let message = viewModel.getMessage(isOnline: true)
         guard let vc = UINib(nibName: "SecondViewController", bundle: .main).instantiate(withOwner: nil, options: nil)[0] as? SecondViewController else { return }
         vc.message = message
         self.navigationController?.pushViewController( vc, animated: true)
     }
     
     @IBAction func localBtnTapped(_ sender: UIButton) {
-        let message = viewModel.dataFactory.localRepository.getLocalMessage()
+        let message = viewModel.getMessage(isOnline: false)
         guard let vc = UINib(nibName: "SecondViewController", bundle: .main).instantiate(withOwner: nil, options: nil)[0] as? SecondViewController else { return }
         vc.message = message
         self.navigationController?.pushViewController( vc, animated: true)

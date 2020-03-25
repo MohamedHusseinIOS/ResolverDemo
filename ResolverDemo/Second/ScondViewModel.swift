@@ -21,11 +21,13 @@ class SecondViewModel: ViewModelType {
     let input: Input
     let output: Output
     
-    let dataFactory: DataFactory
+    private let dataFactory: DataFactory
     
     init(dataFactory: DataFactory) {
         self.dataFactory = dataFactory
         self.input = Input()
         self.output = Output()
     }
+    
+    
 }

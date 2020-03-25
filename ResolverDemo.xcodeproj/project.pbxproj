@@ -22,7 +22,6 @@
 		849340152428ECAB00DFEDD2 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849340142428ECAB00DFEDD2 /* MainViewModel.swift */; };
 		8493401A242911DD00DFEDD2 /* DataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84934019242911DD00DFEDD2 /* DataFactory.swift */; };
 		8493401C2429123B00DFEDD2 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493401B2429123B00DFEDD2 /* Repository.swift */; };
-		849340222429152D00DFEDD2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849340212429152D00DFEDD2 /* NetworkManager.swift */; };
 		849340242429179A00DFEDD2 /* Decoderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849340232429179A00DFEDD2 /* Decoderable.swift */; };
 		8493402624291CD000DFEDD2 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402524291CD000DFEDD2 /* BaseModel.swift */; };
 		8493402C24291FBE00DFEDD2 /* DataResponse+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402824291FBE00DFEDD2 /* DataResponse+Extension.swift */; };
@@ -30,6 +29,7 @@
 		8493402E24291FBE00DFEDD2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402A24291FBE00DFEDD2 /* UIViewController+Extension.swift */; };
 		8493402F24291FBE00DFEDD2 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8493402B24291FBE00DFEDD2 /* Data+Extension.swift */; };
 		8495337C242B414F00FD2593 /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495337B242B414F00FD2593 /* Injection.swift */; };
+		84DBDB0F242B720300EDBD82 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBDB0E242B720300EDBD82 /* NetworkManager.swift */; };
 		902476A2BB7D86592BBFE392 /* Pods_ResolverDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88BC970D56A7F64DE78DD20 /* Pods_ResolverDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +51,6 @@
 		849340142428ECAB00DFEDD2 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		84934019242911DD00DFEDD2 /* DataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFactory.swift; sourceTree = "<group>"; };
 		8493401B2429123B00DFEDD2 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
-		849340212429152D00DFEDD2 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "../../../Upload When Online Demo/uploadWhenOnlineDemo/UploadingWhenOnlineDemo/Networking/NetworkManager.swift"; sourceTree = "<group>"; };
 		849340232429179A00DFEDD2 /* Decoderable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Decoderable.swift; sourceTree = "<group>"; };
 		8493402524291CD000DFEDD2 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		8493402824291FBE00DFEDD2 /* DataResponse+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DataResponse+Extension.swift"; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		8493402A24291FBE00DFEDD2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		8493402B24291FBE00DFEDD2 /* Data+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 		8495337B242B414F00FD2593 /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		84DBDB0E242B720300EDBD82 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AE8241F7B1284344B80CB753 /* Pods-ResolverDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResolverDemo.release.xcconfig"; path = "Target Support Files/Pods-ResolverDemo/Pods-ResolverDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C9335373086316A1ED1D3CFA /* Pods-ResolverDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResolverDemo.debug.xcconfig"; path = "Target Support Files/Pods-ResolverDemo/Pods-ResolverDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D88BC970D56A7F64DE78DD20 /* Pods_ResolverDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResolverDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,7 +144,7 @@
 		849340162428ECE400DFEDD2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				849340212429152D00DFEDD2 /* NetworkManager.swift */,
+				84DBDB0E242B720300EDBD82 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DBDB0F242B720300EDBD82 /* NetworkManager.swift in Sources */,
 				8495337C242B414F00FD2593 /* Injection.swift in Sources */,
-				849340222429152D00DFEDD2 /* NetworkManager.swift in Sources */,
 				8493402F24291FBE00DFEDD2 /* Data+Extension.swift in Sources */,
 				849340152428ECAB00DFEDD2 /* MainViewModel.swift in Sources */,
 				840834FA242A0E2C006D085B /* ScondViewModel.swift in Sources */,

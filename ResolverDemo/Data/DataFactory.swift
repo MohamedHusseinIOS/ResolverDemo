@@ -12,8 +12,8 @@ import RxSwift
 
 class DataFactory {
     
-    let remoteRepository: RemoteRepository
-    let localRepository: LocalRepository
+    private let remoteRepository: RemoteRepository
+    private let localRepository: LocalRepository
     
     init(remoteRepo: RemoteRepository, localRepo: LocalRepository) {
         self.remoteRepository = remoteRepo
@@ -31,4 +31,9 @@ class DataFactory {
     func save <T: BaseModel>(_ items: [T]) {
         localRepository.save(items)
     }
+    
+    func getMessage(isOnline: Bool) -> String {
+        return isOnline ? remoteRepository.getOnlineMessage() : localRepository.getLocalMessage()
+    }
+    
 }

@@ -19,8 +19,6 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let localRepo = viewModel.dataFactory.localRepository
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

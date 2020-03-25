@@ -10,7 +10,7 @@ import Foundation
 
 protocol ViewModelType {
     
-    var dataFactory: DataFactory { get }
+    //var dataFactory: DataFactory { get }
     
     associatedtype Input
     associatedtype Output
